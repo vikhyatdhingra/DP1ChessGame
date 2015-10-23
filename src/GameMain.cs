@@ -19,7 +19,7 @@ namespace ChessGame
 
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.White);
-				cb.DrawGrid ();
+				cb.DrawBoard ();
                 
                 //Draw onto the screen
                 SwinGame.RefreshScreen(60);

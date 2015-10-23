@@ -65,6 +65,7 @@
     <Compile Include="src\ChessBoard.cs" />
     <Compile Include="src\ChessPiece.cs" />
     <Compile Include="src\Colour.cs" />
+    <Compile Include="src\Grid.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
