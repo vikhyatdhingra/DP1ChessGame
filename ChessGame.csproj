@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug-Windows</Configuration>
@@ -62,9 +62,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\GameMain.cs" />
-    <Compile Include="src\ChessBoard.cs" />
     <Compile Include="src\ChessPiece.cs" />
-    <Compile Include="src\Colour.cs" />
+    <Compile Include="src\ChessBoard.cs" />
+    <Compile Include="src\Grid.cs" />
+    <Compile Include="src\LoadResources.cs" />
+    <Compile Include="src\Pawn.cs" />
+    <Compile Include="src\Bishop.cs" />
+    <Compile Include="src\King.cs" />
+    <Compile Include="src\Knight.cs" />
+    <Compile Include="src\PawnTests.cs" />
+    <Compile Include="src\Queen.cs" />
+    <Compile Include="src\Rook.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -72,6 +80,9 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\animations\startup.txt">
@@ -155,6 +166,8 @@
     <WinLibraryFiles Include="lib\win\smpeg.dll" />
     <WinLibraryFiles Include="lib\win\swingame.rc" />
     <WinLibraryFiles Include="lib\win\zlib1.dll" />
+    <None Include="Resources\fonts\calibre-regular.ttf" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
