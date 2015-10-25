@@ -4,16 +4,47 @@ namespace ChessGame
 {
 	public abstract class ChessPiece
 	{
-		private Grid _currentGrid;
+		private Grid _grid;
+		private string _player;
+		private string _name;
 
-		public ChessPiece (Grid initialGrid)
+		public ChessPiece (Grid initialGrid, string player, string name)
 		{
-			_currentGrid = initialGrid;
+			_grid = initialGrid;
+			_player = player;
+			_name = name;
 		}
 
-		public abstract bool CheckMovementRule(int gridX, int gridY);
+		public string Name
+		{
+			get
+			{
+				return _player + _name;
+			}
+		}
 
-		public abstract string MovePiece();
+		public Grid Grid
+		{
+			get
+			{
+				return _grid;
+			} set
+			{
+				_grid = value;
+			}
+		}
+
+		public string Player
+		{
+			get
+			{
+				return _player;
+			}
+		}
+		public abstract bool CheckMovementRule(Grid grid, ChessBoard cb);
+
+		public abstract string MovePiece(Grid grid, ChessBoard cb);
+	
 	}
 }
 

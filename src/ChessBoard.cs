@@ -5,15 +5,11 @@ namespace ChessGame
 {
 	public class ChessBoard
 	{
-		//private int[][] gridCoordinates;
-		private int _tempX = 0;
-		private int _tempY = 0;
-		//private Color _color;
+		private int _x = 0;
+		private int _y = 0;
 		private const int GRID_WIDTH = 75; 
 		private const int GRID_HEIGHT = 75;
-
 		private Grid[,] _grids = new Grid[8,8];
-		//private Point2D[,] _locations = new Point2D[8,8];
 
 		public ChessBoard ()
 		{
@@ -21,10 +17,6 @@ namespace ChessGame
 			{
 				for (int j = 0; j < 8; j++)
 				{
-
-					Console.Write (_tempX);
-					Console.WriteLine (_tempY);
-
 					Color color = Color.Black;
 					if ((i % 2 == 0) || (j % 2 == 0))
 					{
@@ -37,20 +29,50 @@ namespace ChessGame
 							color = Color.White;
 						}
 					}
+					_grids [i,j] = new Grid (_x, _y, i, j, color);
+					_y += 75;
 
-					_grids [i,j] = new Grid (_tempX, _tempY, color);
-
-					_tempY += 75;
-					if (_tempY == 600)
-						_tempY = 0;
+					if (_y == 600)
+					{
+						_y = 0;
+					}
 				}
-				_tempX += 75;
-				if (_tempX == 600)
-					_tempX = 0;
+				_x += 75;
+				if (_x == 600)
+				_x = 0;
 			}
 
 		}
 
+		public void Initialize()
+		{
+			for (int i = 0; i < 8; i++)
+			{
+				_grids [i, 1].PlacePiece (new Pawn (_grids [i, 1], "B"));
+			}
+
+			for (int i = 0; i < 8; i++)
+			{
+				_grids [i, 6].PlacePiece (new Pawn (_grids [i, 6], "W"));
+			}
+		
+			_grids [0, 0].PlacePiece (new Rook (_grids [0, 0], "B"));
+			_grids [7, 0].PlacePiece (new Rook (_grids [7, 0], "B"));
+			_grids [0, 7].PlacePiece (new Rook (_grids [0, 7], "W"));
+			_grids [7, 7].PlacePiece (new Rook (_grids [7, 7], "W"));
+			_grids [1, 0].PlacePiece (new Knight (_grids [1, 0], "B"));
+			_grids [6, 0].PlacePiece (new Knight (_grids [6, 0], "B"));
+			_grids [1, 7].PlacePiece (new Knight (_grids [1, 7], "W"));
+			_grids [6, 7].PlacePiece (new Knight (_grids [6, 7], "W"));
+			_grids [2, 0].PlacePiece (new Bishop (_grids [2, 0], "B"));
+			_grids [5, 0].PlacePiece (new Bishop (_grids [5, 0], "B"));
+			_grids [2, 7].PlacePiece (new Bishop (_grids [2, 7], "W"));
+			_grids [5, 7].PlacePiece (new Bishop (_grids [5, 7], "W"));
+			_grids [3, 0].PlacePiece (new Queen (_grids [2, 0], "B"));
+			_grids [3, 7].PlacePiece (new Queen (_grids [2, 7], "W"));
+			_grids [4, 0].PlacePiece (new King (_grids [5, 0], "B"));
+			_grids [4, 7].PlacePiece (new King (_grids [5, 7], "W"));
+		}
 		public void DrawBoard()
 		{
 			for (int i = 0; i < 8; i++)
@@ -62,32 +84,14 @@ namespace ChessGame
 			}
 		}
 
-		/*
-		//It draws the chessboard
-		public void DrawGrid()
+		public Grid this[int i, int j]
 		{
-			//X axis is kept static and Y axis is incremented. It draws a triange with base Y axis
-			//In other words, have the chess board is drawn
-			for (_x = 0; _x <= 600; _x += 75)
+			get
 			{
-				for (_y = _x; _y <= 600; _y += 150)
-				{
-					
-			`		SwinGame.DrawRectangle (_color, _x, _y, _width, _height);
-					SwinGame.FillRectangle (_color, _x, _y, _width, _height);
-				}
+				return _grids [i, j];
 			}
+		}
 
-			// It draws the other half
-			for (_y = 0; _y <= 600; _y += 75)
-			{
-				for (_x = _y; _x <= 600; _x += 150)
-				{
-					SwinGame.DrawRectangle (_color, _x, _y, _width, _height);
-					SwinGame.FillRectangle (_color, _x, _y, _width, _height);
-				}
-			}
-		}*/
 	}
 }
 
