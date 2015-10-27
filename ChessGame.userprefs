@@ -2,37 +2,19 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="src\Rook.cs">
     <Files>
-      <File FileName="src\GameMain.cs" Line="22" Column="28" />
-      <File FileName="src\ChessBoard.cs" Line="90" Column="5" />
-      <File FileName="src\ChessPiece.cs" Line="46" Column="60" />
-      <File FileName="src\Grid.cs" Line="45" Column="10" />
-      <File FileName="src\LoadResources.cs" Line="15" Column="3" />
-      <File FileName="src\Pawn.cs" Line="85" Column="20" />
-      <File FileName="src\PawnTests.cs" Line="32" Column="4" />
-      <File FileName="src\Queen.cs" Line="16" Column="60" />
-      <File FileName="src\Rook.cs" Line="39" Column="8" />
-      <File FileName="src\Bishop.cs" Line="13" Column="16" />
-      <File FileName="src\Knight.cs" Line="17" Column="60" />
-      <File FileName="src\King.cs" Line="11" Column="66" />
+      <File FileName="src\GameMain.cs" Line="1" Column="1" />
+      <File FileName="src\ChessBoard.cs" Line="1" Column="1" />
+      <File FileName="src\ChessPiece.cs" Line="1" Column="1" />
+      <File FileName="src\Grid.cs" Line="1" Column="1" />
+      <File FileName="src\LoadResources.cs" Line="1" Column="1" />
+      <File FileName="src\Pawn.cs" Line="1" Column="1" />
+      <File FileName="src\PawnTests.cs" Line="1" Column="1" />
+      <File FileName="src\Queen.cs" Line="1" Column="1" />
+      <File FileName="src\Rook.cs" Line="4" Column="1" />
+      <File FileName="src\Bishop.cs" Line="1" Column="1" />
+      <File FileName="src\Knight.cs" Line="1" Column="1" />
+      <File FileName="src\King.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="ChessGame" expanded="True">
-            <Node name="ChessGame" expanded="True">
-              <Node name="src" expanded="True">
-                <Node name="Rook.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="ChessGame" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
