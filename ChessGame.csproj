@@ -59,20 +59,25 @@
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="Resources\" />
+    <Folder Include="src\pieces\" />
+    <Folder Include="src\tests\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\GameMain.cs" />
-    <Compile Include="src\ChessPiece.cs" />
     <Compile Include="src\ChessBoard.cs" />
     <Compile Include="src\Grid.cs" />
     <Compile Include="src\LoadResources.cs" />
-    <Compile Include="src\Pawn.cs" />
-    <Compile Include="src\Bishop.cs" />
-    <Compile Include="src\King.cs" />
-    <Compile Include="src\Knight.cs" />
-    <Compile Include="src\PawnTests.cs" />
-    <Compile Include="src\Queen.cs" />
-    <Compile Include="src\Rook.cs" />
+    <Compile Include="src\GameController.cs" />
+    <Compile Include="src\GameStates.cs" />
+    <Compile Include="src\pieces\Bishop.cs" />
+    <Compile Include="src\pieces\ChessPiece.cs" />
+    <Compile Include="src\pieces\King.cs" />
+    <Compile Include="src\pieces\Knight.cs" />
+    <Compile Include="src\pieces\Pawn.cs" />
+    <Compile Include="src\pieces\Queen.cs" />
+    <Compile Include="src\pieces\Rook.cs" />
+    <Compile Include="src\tests\PawnTests.cs" />
+    <Compile Include="src\tests\RookTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

@@ -8,49 +8,79 @@ namespace ChessGame
 		{
 		}
 
+		///Rook.grid/this.grid is the current position of the piece
+		///grid passed in as parameter is the intended position
 		public override bool CheckMovementRule(Grid grid, ChessBoard cb)
 		{
+			if (grid.Piece != null)
+			{
+				if (this.Player == grid.Piece.Player)
+				{
+					return false;
+				}
+			}
+
 			if (grid.X == this.Grid.X)
 			{
 				if (this.Grid.Y > grid.Y)
 				{
-					for (int old = this.Grid.Y; old > grid.Y; old--)
+					for (int i = this.Grid.Y; i > grid.Y; i--)
 					{
-						if (cb [old, this.Grid.Y].Piece != null)
+						if (cb [i, this.Grid.Y].Piece != null)
 						{
 							return false;
 						}
-					}
-
-					if (this.Player == grid.Piece.Player)
-					{
-						return false;
 					}
 
 					return true;
 				}
-				else if (this.Grid.Y > grid.Y)
+				else if (this.Grid.Y < grid.Y)
 				{
-					for (int old = this.Grid.Y; old < grid.Y; old++)
+					for (int i = this.Grid.Y; i < grid.Y; i++)
 					{
-						if (cb [old, this.Grid.Y].Piece != null)
+						if (cb [i, this.Grid.Y].Piece != null)
 						{
 							return false;
 						}
 					}
-					if (this.Player == grid.Piece.Player)
-					{
-						return false;
-					}
+					return true;
 				}
+				else
+					return false;
 			}
 			else if (grid.Y == this.Grid.Y)
-				return true;
+			{
+				if (this.Grid.X > grid.X)
+				{
+					for (int i = this.Grid.X; i > grid.X; i--)
+					{
+						if (cb [i, this.Grid.X].Piece != null)
+						{
+							return false;
+						}
+					}
+
+					return true;
+				}
+				else if (this.Grid.X < grid.X)
+				{
+					for (int i = this.Grid.X; i < grid.X; i++)
+					{
+						if (cb [i, this.Grid.X].Piece != null)
+						{
+							return false;
+						}
+					}
+
+					return true;
+				}
+				else
+					return false;
+			}
 			else
 			{
 				return false;
-			}
-			return false;
+			}	
 		}
 
 

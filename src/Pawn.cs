@@ -13,6 +13,9 @@ namespace ChessGame
 
 		public override bool CheckMovementRule(Grid grid, ChessBoard cb)
 		{
+			if (this.Grid == grid)
+				return false;
+			
 			if (this.Player == "B")
 			{
 				if (firstPawnMove)

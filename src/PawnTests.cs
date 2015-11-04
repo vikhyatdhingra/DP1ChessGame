@@ -24,13 +24,13 @@ namespace ChessGame
 		}
 
 		[Test()]
-		public void TestRule()
+		public void TestMovementRule()
 		{
 			ChessBoard cb = new ChessBoard ();
-			Pawn testPiece = new Pawn (cb [3, 1], "B");
-			cb [3, 1].PlacePiece(testPiece);
+			Pawn testPiece = new Pawn (cb [3, 2], "B");
+			cb [3, 2].PlacePiece(testPiece);
 
-			Assert.IsTrue (testPiece.CheckMovementRule (cb [3, 2], cb));
+			Assert.IsFalse (testPiece.CheckMovementRule (cb [3, 2], cb));
 		}
 	}
 		
