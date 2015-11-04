@@ -24,34 +24,6 @@ H:\ChessGame\obj\x86\Debug-Windows\MyGame.exe
 H:\ChessGame\obj\x86\Debug-Windows\ChessGame.csprojResolveAssemblyReference.cache
 H:\ChessGame\bin\Debug\nunit.framework.dll
 H:\ChessGame\bin\Debug\nunit.framework.xml
-<<<<<<< HEAD
-D:\ChessGame\bin\Debug\Resources\animations\startup.txt
-D:\ChessGame\bin\Debug\Resources\bundles\FileDialog.txt
-D:\ChessGame\bin\Debug\Resources\bundles\splash.txt
-D:\ChessGame\bin\Debug\Resources\fonts\arial.ttf
-D:\ChessGame\bin\Debug\Resources\fonts\cour.ttf
-D:\ChessGame\bin\Debug\Resources\fonts\maven_pro_regular.ttf
-D:\ChessGame\bin\Debug\Resources\images\fdFile.png
-D:\ChessGame\bin\Debug\Resources\images\fdFolder.png
-D:\ChessGame\bin\Debug\Resources\images\FileDialog_Active.png
-D:\ChessGame\bin\Debug\Resources\images\FileDialog_Background.png
-D:\ChessGame\bin\Debug\Resources\images\FileDialog_Inactive.png
-D:\ChessGame\bin\Debug\Resources\images\FileDialog_Scroll.png
-D:\ChessGame\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
-D:\ChessGame\bin\Debug\Resources\images\Swinburne.jpg
-D:\ChessGame\bin\Debug\Resources\images\SwinGameAni.png
-D:\ChessGame\bin\Debug\Resources\panels\FileDialog.txt
-D:\ChessGame\bin\Debug\Resources\sounds\error.wav
-D:\ChessGame\bin\Debug\Resources\sounds\SwinGameStart.wav
-D:\ChessGame\bin\Debug\Resources\SwinGame.icns
-D:\ChessGame\bin\Debug\Resources\SwinGame.ico
-D:\ChessGame\bin\Debug\MyGame.exe
-D:\ChessGame\bin\Debug\nunit.framework.dll
-D:\ChessGame\bin\Debug\SwinGame.dll
-D:\ChessGame\bin\Debug\nunit.framework.xml
-D:\ChessGame\obj\x86\Debug-Windows\ChessGame.csprojResolveAssemblyReference.cache
-D:\ChessGame\obj\x86\Debug-Windows\MyGame.exe
-=======
 C:\Users\LinhShin\Documents\GitHub\DP1ChessGame\bin\Debug\Resources\animations\startup.txt
 C:\Users\LinhShin\Documents\GitHub\DP1ChessGame\bin\Debug\Resources\bundles\FileDialog.txt
 C:\Users\LinhShin\Documents\GitHub\DP1ChessGame\bin\Debug\Resources\bundles\splash.txt
@@ -104,4 +76,3 @@ C:\Programming\ChessGame\bin\Debug\SwinGame.dll
 C:\Programming\ChessGame\bin\Debug\nunit.framework.xml
 C:\Programming\ChessGame\obj\x86\Debug-Windows\ChessGame.csprojResolveAssemblyReference.cache
 C:\Programming\ChessGame\obj\x86\Debug-Windows\MyGame.exe
->>>>>>> GameControllerAlgorithm

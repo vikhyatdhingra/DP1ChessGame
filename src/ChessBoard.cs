@@ -45,6 +45,29 @@ namespace ChessGame
 
 		}
 
+		public void HighlightPath(ChessPiece piece) 
+		{
+			for (int i = 0; i < 8; i++)
+			{
+				for (int j = 0; j < 8; j++)
+				{
+					if (piece.CheckMovementRule(_grids[i,j], this))
+						_grids [i, j].IsHighlighted = true;
+				}
+			} 
+		}
+
+		public void RemovePathHighLight()
+		{
+			for (int i = 0; i < 8; i++)
+			{
+				for (int j = 0; j < 8; j++)
+				{
+					_grids [i, j].IsHighlighted = false;
+				}
+			} 
+		}
+
 		public void Initialize()
 		{
 			for (int i = 0; i < 8; i++)

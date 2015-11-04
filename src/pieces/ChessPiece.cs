@@ -60,7 +60,7 @@ namespace ChessGame
 			}
 			else
 			{
-				for (int i = this.Grid.X + 1; i < grid.X; i++)
+				for (int i = this.Grid.Y + 1; i < grid.Y; i++)
 				{
 					if (cb [this.Grid.X, i].Piece != null)
 					{
@@ -88,7 +88,7 @@ namespace ChessGame
 			}
 			else
 			{
-				for (int i = this.Grid.Y + 1; i < grid.Y; i++)
+				for (int i = this.Grid.X + 1; i < grid.X; i++)
 				{
 					if (cb [i, this.Grid.Y].Piece != null)
 					{

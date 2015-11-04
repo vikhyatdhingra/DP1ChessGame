@@ -87,6 +87,7 @@ namespace ChessGame
 
 		public static void HandleMovement()
 		{
+			_board.HighlightPath (_currentPiece);
 			_currentPiece.IsHighlighted = true;
 			if (SwinGame.MouseClicked (MouseButton.LeftButton))
 			{
@@ -97,6 +98,7 @@ namespace ChessGame
 				{
 					if (_state == GameState.WhiteMove)
 					{
+						_board.RemovePathHighLight ();
 						_currentPiece.IsHighlighted = false;
 						_currentPiece = null;
 						_state = GameState.BlackChoose;
@@ -104,6 +106,7 @@ namespace ChessGame
 					}
 					else
 					{
+						_board.RemovePathHighLight ();
 						_currentPiece.IsHighlighted = false;
 						_currentPiece = null;
 						_state = GameState.WhiteChoose;
@@ -116,6 +119,7 @@ namespace ChessGame
 			{
 				if (_state == GameState.WhiteMove)
 				{
+					_board.RemovePathHighLight ();
 					_currentPiece.IsHighlighted = false;
 					_currentPiece = null;
 					_state = GameState.WhiteChoose;
@@ -123,6 +127,7 @@ namespace ChessGame
 				}
 				else
 				{
+					_board.RemovePathHighLight ();
 					_currentPiece.IsHighlighted = false;
 					_currentPiece = null;
 					_state = GameState.BlackChoose;

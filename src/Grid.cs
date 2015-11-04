@@ -11,6 +11,7 @@ namespace ChessGame
 		private Color _color;
 		private int _x;
 		private int _y;
+		private bool _isHighlighted;
 
 		public Grid (int x, int y, int indexX, int indexY, Color color)
 		{ 
@@ -21,6 +22,7 @@ namespace ChessGame
 			_centerLocation.X = x + 75 / 2 - 8;
 			_centerLocation.Y = y + 75 / 2 - 8;
 			_color = color;
+			_isHighlighted = false;
 		}
 
 		public void PlacePiece (ChessPiece piece)
@@ -61,6 +63,11 @@ namespace ChessGame
 				SwinGame.DrawRectangle (Color.Black, _drawingLocation.X, _drawingLocation.Y, 75, 75);
 			}
 
+			if (IsHighlighted)
+			{
+				SwinGame.FillRectangle (Color.DarkGreen, _drawingLocation.X + 2, _drawingLocation.Y + 2, 71, 71);
+			}
+
 			DrawPiece ();
 		}
 
@@ -69,6 +76,18 @@ namespace ChessGame
 			get
 			{
 				return _chessPiece;
+			}
+		}
+
+		public bool IsHighlighted
+		{
+			get
+			{
+				return _isHighlighted;
+			}
+			set
+			{
+				_isHighlighted = value;
 			}
 		}
 

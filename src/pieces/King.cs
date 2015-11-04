@@ -12,8 +12,10 @@ namespace ChessGame
 		{
 			if (!CheckDestinationPieceColour (grid))
 				return false;
-
-			if (Math.Abs (grid.X - this.Grid.X) == 1 || Math.Abs (grid.Y - this.Grid.Y) == 1)
+			if (IsDestinationSameGrid (grid))
+				return false;
+			
+			if (Math.Abs (grid.X - this.Grid.X) <= 1 && Math.Abs (grid.Y - this.Grid.Y) <= 1)
 				return true;
 			return false;
 		}

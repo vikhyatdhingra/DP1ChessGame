@@ -4,18 +4,6 @@
     <Files>
       <File FileName="src\GameMain.cs" Line="1" Column="1" />
       <File FileName="src\ChessBoard.cs" Line="1" Column="1" />
-<<<<<<< HEAD
-      <File FileName="src\ChessPiece.cs" Line="1" Column="1" />
-      <File FileName="src\Grid.cs" Line="1" Column="1" />
-      <File FileName="src\LoadResources.cs" Line="1" Column="1" />
-      <File FileName="src\Pawn.cs" Line="1" Column="1" />
-      <File FileName="src\PawnTests.cs" Line="1" Column="1" />
-      <File FileName="src\Queen.cs" Line="1" Column="1" />
-      <File FileName="src\Rook.cs" Line="4" Column="1" />
-      <File FileName="src\Bishop.cs" Line="1" Column="1" />
-      <File FileName="src\Knight.cs" Line="1" Column="1" />
-      <File FileName="src\King.cs" Line="1" Column="1" />
-=======
       <File FileName="src\ChessPiece.cs" Line="51" Column="16" />
       <File FileName="src\Grid.cs" Line="68" Column="4" />
       <File FileName="src\LoadResources.cs" Line="1" Column="1" />
@@ -27,7 +15,6 @@
       <File FileName="src\Knight.cs" Line="1" Column="1" />
       <File FileName="src\King.cs" Line="1" Column="1" />
       <File FileName="src\RookTests.cs" Line="2" Column="23" />
->>>>>>> GameControllerAlgorithm
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

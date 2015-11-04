@@ -37,31 +37,31 @@ namespace ChessGame
 		{
 			int offset = 0;
 
-			if (this.Player == "B")
-			{
-				offset = 2;
-			}
-			else
-				offset = -2;
+
 			if (this.Grid.Y == grid.Y)
 			{
+
+				if (Math.Abs (grid.X - this.Grid.X) > 2)
+					return false;
+
+				offset = grid.X - this.Grid.X;
+
 				if (offset > 0)
 				{
-					if (grid.X <= (this.Grid.X + offset))
+					if (grid.X <= this.Grid.X + offset && grid.X > this.Grid.X)
 					{
-						_firstPawnMove = false;
-						return true;
+						return (grid.Piece == null);
 					}
 				}
 				else
 				{
-					if (grid.X >= this.Grid.X + offset)
+					if (grid.X >= this.Grid.X + offset && grid.X < this.Grid.X)
 					{
-						_firstPawnMove = false;
-						return true;
+						return (grid.Piece == null);
 					}
 				}
 			}
+
 			return (CheckCaptureRule (grid));
 		}
 			
@@ -99,7 +99,19 @@ namespace ChessGame
 			{
 				return (CheckLaterMovementRule (grid));
 			}
-				
+		}
+
+		public override string MovePiece(Grid grid, ChessBoard cb)
+		{
+			if (CheckMovementRule (grid, cb))
+			{
+				_firstPawnMove = false;
+				this.Grid.RemovePiece ();
+				grid.PlacePiece (this);
+				return null;
+			}
+
+			return "Invalid move";
 		}
 	}
 }
