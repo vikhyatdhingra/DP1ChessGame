@@ -78,11 +78,24 @@ namespace ChessGame
 			{
 				if (_chessPiece.Player == "B")
 				{
-					SwinGame.DrawText (_chessPiece.Name, Color.Red, LoadResources._font, _centerLocation);
+					if (_chessPiece.IsHighlighted)
+					{
+						SwinGame.DrawText (_chessPiece.Name, Color.Green, LoadResources._font, _centerLocation);
+					} else
+					{
+						SwinGame.DrawText (_chessPiece.Name, Color.Red, LoadResources._font, _centerLocation);
+					}
 				}
 				else
 				{
-					SwinGame.DrawText (_chessPiece.Name, Color.Blue, LoadResources._font, _centerLocation);	
+					if (_chessPiece.IsHighlighted)
+					{
+						SwinGame.DrawText (_chessPiece.Name, Color.Green, LoadResources._font, _centerLocation);
+					}
+					else
+					{
+						SwinGame.DrawText (_chessPiece.Name, Color.Blue, LoadResources._font, _centerLocation);	
+					}
 				}
 			}
 		}

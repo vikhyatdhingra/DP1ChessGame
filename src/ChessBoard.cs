@@ -29,17 +29,18 @@ namespace ChessGame
 							color = Color.White;
 						}
 					}
-					_grids [i,j] = new Grid (_x, _y, i, j, color);
-					_y += 75;
 
-					if (_y == 600)
-					{
-						_y = 0;
-					}
+					_grids [i,j] = new Grid (_x, _y, i, j, color);
+					_x += 75;
+					if (_x == 600)
+						_x = 0;
 				}
-				_x += 75;
-				if (_x == 600)
-				_x = 0;
+				_y += 75;
+
+				if (_y == 600)
+				{
+					_y = 0;
+				}
 			}
 
 		}
@@ -48,31 +49,32 @@ namespace ChessGame
 		{
 			for (int i = 0; i < 8; i++)
 			{
-				_grids [i, 1].PlacePiece (new Pawn (_grids [i, 1], "B"));
+				_grids [1, i].PlacePiece (new Pawn (_grids [1, i], "B"));
 			}
 
 			for (int i = 0; i < 8; i++)
 			{
-				_grids [i, 6].PlacePiece (new Pawn (_grids [i, 6], "W"));
+				_grids [6, i].PlacePiece (new Pawn (_grids [6, i], "W"));
 			}
 		
 			_grids [0, 0].PlacePiece (new Rook (_grids [0, 0], "B"));
-			_grids [7, 0].PlacePiece (new Rook (_grids [7, 0], "B"));
-			_grids [0, 7].PlacePiece (new Rook (_grids [0, 7], "W"));
+			_grids [7, 0].PlacePiece (new Rook (_grids [7, 0], "W"));
+			_grids [0, 7].PlacePiece (new Rook (_grids [0, 7], "B"));
 			_grids [7, 7].PlacePiece (new Rook (_grids [7, 7], "W"));
-			_grids [1, 0].PlacePiece (new Knight (_grids [1, 0], "B"));
-			_grids [6, 0].PlacePiece (new Knight (_grids [6, 0], "B"));
-			_grids [1, 7].PlacePiece (new Knight (_grids [1, 7], "W"));
-			_grids [6, 7].PlacePiece (new Knight (_grids [6, 7], "W"));
-			_grids [2, 0].PlacePiece (new Bishop (_grids [2, 0], "B"));
-			_grids [5, 0].PlacePiece (new Bishop (_grids [5, 0], "B"));
-			_grids [2, 7].PlacePiece (new Bishop (_grids [2, 7], "W"));
-			_grids [5, 7].PlacePiece (new Bishop (_grids [5, 7], "W"));
-			_grids [3, 0].PlacePiece (new Queen (_grids [2, 0], "B"));
-			_grids [3, 7].PlacePiece (new Queen (_grids [2, 7], "W"));
-			_grids [4, 0].PlacePiece (new King (_grids [5, 0], "B"));
-			_grids [4, 7].PlacePiece (new King (_grids [5, 7], "W"));
+			_grids [0, 1].PlacePiece (new Knight (_grids [0, 1], "B"));
+			_grids [0, 6].PlacePiece (new Knight (_grids [0, 6], "B"));
+			_grids [7, 1].PlacePiece (new Knight (_grids [7, 1], "W"));
+			_grids [7, 6].PlacePiece (new Knight (_grids [7, 6], "W"));
+			_grids [0, 2].PlacePiece (new Bishop (_grids [0, 2], "B"));
+			_grids [0, 5].PlacePiece (new Bishop (_grids [0, 5], "B"));
+			_grids [7, 2].PlacePiece (new Bishop (_grids [7, 2], "W"));
+			_grids [7, 5].PlacePiece (new Bishop (_grids [7, 5], "W"));
+			_grids [0, 3].PlacePiece (new Queen (_grids [0, 3], "B"));
+			_grids [7, 3].PlacePiece (new Queen (_grids [7, 3], "W"));
+			_grids [0, 4].PlacePiece (new King (_grids [0, 4], "B"));
+			_grids [7, 4].PlacePiece (new King (_grids [7, 4], "W"));
 		}
+
 		public void DrawBoard()
 		{
 			for (int i = 0; i < 8; i++)

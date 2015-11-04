@@ -7,24 +7,19 @@ namespace ChessGame
     {
         public static void Main()
         {
-            //Open the game window
             SwinGame.OpenGraphicsWindow("GameMain", 600, 600);
-			ChessBoard cb = new ChessBoard ();
 			LoadResources.LoadFont ();
-			//Pawn testPiece = new Pawn (cb [0, 0], "B");
-			//cb [0, 0].PlacePiece(testPiece);
-			cb.Initialize();
+			GameController.LoadGame ();
             //Run the game loop
             while(false == SwinGame.WindowCloseRequested())
             {
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
-				cb [0, 1].Piece.MovePiece (cb [0, 4], cb);
+				GameController.HandleGameInput();
 
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.White);
-				cb.DrawBoard ();
-                
+				GameController.DrawGame ();
                 //Draw onto the screen
                 SwinGame.RefreshScreen(60);
             }
