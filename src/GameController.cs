@@ -5,10 +5,18 @@ namespace ChessGame
 {
 	public static class GameController
 	{
+
+
+		//The current state of the game
 		private static GameState _state;
+		//The chess piece that is currently chosen
 		private static ChessPiece _currentPiece;
+		//The board currently handled by the Controller
 		private static ChessBoard _board;
 
+		/// <summary>
+		/// Loads the game.
+		/// </summary>
 		public static void LoadGame()
 		{
 			ChessBoard cb = new ChessBoard ();
@@ -17,6 +25,9 @@ namespace ChessGame
 			_state = GameState.WhiteChoose;
 		}
 
+		/// <summary>
+		/// Determines the method for handling user input based on the current game state.
+		/// </summary>
 		public static void HandleGameInput()
 		{
 			switch (_state)
@@ -36,6 +47,9 @@ namespace ChessGame
 			}
 		}
 
+		/// <summary>
+		/// Handles the player's input for choosing which piece to move.
+		/// </summary>
 		public static void HandleChoice()
 		{
 			if(SwinGame.MouseClicked(MouseButton.LeftButton))
@@ -84,11 +98,14 @@ namespace ChessGame
 			return _board [row, col];
 		}
 
-
+		/// <summary>
+		/// Handles the player's input for moving the chosen piece.
+		/// </summary>
 		public static void HandleMovement()
 		{
 			_board.HighlightPath (_currentPiece);
 			_currentPiece.IsHighlighted = true;
+
 			if (SwinGame.MouseClicked (MouseButton.LeftButton))
 			{
 				Grid grid = MouseToGrid ();
@@ -115,6 +132,7 @@ namespace ChessGame
 				}
 			}
 
+			//Removes piece selection and returns to the Choosing phase	
 			if (SwinGame.MouseClicked (MouseButton.RightButton))
 			{
 				if (_state == GameState.WhiteMove)
@@ -137,12 +155,18 @@ namespace ChessGame
 				
 		}
 
+		/// <summary>
+		/// Draws the game.
+		/// </summary>
 		public static void DrawGame()
 		{
 			_board.DrawBoard ();
 			PrintMessage ();
 		}
 
+		/// <summary>
+		/// Prints the message.
+		/// </summary>
 		public static void PrintMessage()
 		{
 			SwinGame.DrawText (_state.ToString(), Color.Red, 300,300);

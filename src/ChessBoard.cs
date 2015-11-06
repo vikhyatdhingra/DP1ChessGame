@@ -5,14 +5,20 @@ namespace ChessGame
 {
 	public class ChessBoard
 	{
-		private int _x = 0;
-		private int _y = 0;
+		// The dimensions of each grid
 		private const int GRID_WIDTH = 75; 
 		private const int GRID_HEIGHT = 75;
+		// A grid array used for storing the grids on the chessboard
 		private Grid[,] _grids = new Grid[8,8];
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="ChessGame.ChessBoard"/> class.
+		/// </summary>
 		public ChessBoard ()
 		{
+			int x = 0;
+			int y = 0;
+
 			for (int i = 0; i < 8; i++)
 			{
 				for (int j = 0; j < 8; j++)
@@ -30,21 +36,25 @@ namespace ChessGame
 						}
 					}
 
-					_grids [i,j] = new Grid (_x, _y, i, j, color);
-					_x += 75;
-					if (_x == 600)
-						_x = 0;
+					_grids [i,j] = new Grid (x, y, i, j, color);
+					x += 75;
+					if (x == 600)
+						x = 0;
 				}
-				_y += 75;
+				y += 75;
 
-				if (_y == 600)
+				if (y == 600)
 				{
-					_y = 0;
+					y = 0;
 				}
 			}
 
 		}
 
+		/// <summary>
+		/// Highlights the path possible for a chess piece.
+		/// </summary>
+		/// <param name="piece">The chess piece whose path needs to be highlighted</param>
 		public void HighlightPath(ChessPiece piece) 
 		{
 			for (int i = 0; i < 8; i++)
@@ -57,6 +67,9 @@ namespace ChessGame
 			} 
 		}
 
+		/// <summary>
+		/// Removes the path highlight.
+		/// </summary>
 		public void RemovePathHighLight()
 		{
 			for (int i = 0; i < 8; i++)
@@ -68,6 +81,9 @@ namespace ChessGame
 			} 
 		}
 
+		/// <summary>
+		/// Sets up the initial board
+		/// </summary>
 		public void Initialize()
 		{
 			for (int i = 0; i < 8; i++)
@@ -98,6 +114,9 @@ namespace ChessGame
 			_grids [7, 4].PlacePiece (new King (_grids [7, 4], "W"));
 		}
 
+		/// <summary>
+		/// Draws the board.
+		/// </summary>
 		public void DrawBoard()
 		{
 			for (int i = 0; i < 8; i++)
@@ -109,6 +128,11 @@ namespace ChessGame
 			}
 		}
 
+		/// <summary>
+		/// Gets the <see cref="ChessGame.ChessBoard"/> with the specified row and col indexes.
+		/// </summary>
+		/// <param name="i">The row index.</param>
+		/// <param name="j">The column index.</param>
 		public Grid this[int i, int j]
 		{
 			get

@@ -5,14 +5,28 @@ namespace ChessGame
 {
 	public class Grid
 	{
+		//The piece currently on the grid
 		private ChessPiece _chessPiece = null;
+		//The location for drawing the piece representation. This is calculated from the drawing location
 		private Point2D _centerLocation;
+		//The location for drawing the grid itself
 		private Point2D _drawingLocation;
+		//The color of the grid
 		private Color _color;
+		//The indexes of the grid on the chessboard
 		private int _x;
 		private int _y;
+		//Indicates whether this grid is highlighted or not
 		private bool _isHighlighted;
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="ChessGame.Grid"/> class.
+		/// </summary>
+		/// <param name="x">The x coordinate for drawing.</param>
+		/// <param name="y">The y coordinate for drawing.</param>
+		/// <param name="indexX">Row index.</param>
+		/// <param name="indexY">Column Index.</param>
+		/// <param name="color">Color.</param>
 		public Grid (int x, int y, int indexX, int indexY, Color color)
 		{ 
 			_x = indexX;
@@ -25,17 +39,28 @@ namespace ChessGame
 			_isHighlighted = false;
 		}
 
+		/// <summary>
+		/// Places a chess piece onto the grid
+		/// </summary>
+		/// <param name="piece">A ChessPiece object</param>
 		public void PlacePiece (ChessPiece piece)
 		{
 			_chessPiece = piece;
 			_chessPiece.Grid = this;
 		}
 
+		/// <summary>
+		/// Removes the current piece from the grid.
+		/// </summary>
 		public void RemovePiece ()
 		{
 			_chessPiece = null;
 		}
 
+		/// <summary>
+		/// Gets the row index.
+		/// </summary>
+		/// <value>The row index</value>
 		public int X
 		{
 			get
@@ -44,6 +69,10 @@ namespace ChessGame
 			}
 		}
 
+		/// <summary>
+		/// Gets the column index.
+		/// </summary>
+		/// <value>The column index</value>
 		public int Y
 		{
 			get
@@ -52,6 +81,9 @@ namespace ChessGame
 			}
 		}
 
+		/// <summary>
+		/// Draws the grid
+		/// </summary>
 		public void DrawGrid()
 		{
 			if (_color == Color.Black)
@@ -71,6 +103,10 @@ namespace ChessGame
 			DrawPiece ();
 		}
 
+		/// <summary>
+		/// Gets the current piece on the grid.
+		/// </summary>
+		/// <value>The piece.</value>
 		public ChessPiece Piece
 		{
 			get
@@ -79,6 +115,10 @@ namespace ChessGame
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets a value indicating whether this grid is highlighted.
+		/// </summary>
+		/// <value><c>true</c> if this instance is highlighted; otherwise, <c>false</c>.</value>
 		public bool IsHighlighted
 		{
 			get
@@ -91,6 +131,9 @@ namespace ChessGame
 			}
 		}
 
+		/// <summary>
+		/// Draws the piece currently on the grid.
+		/// </summary>
 		public void DrawPiece()
 		{
 			if (_chessPiece != null)
