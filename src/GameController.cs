@@ -5,12 +5,12 @@ namespace ChessGame
 {
 	public static class GameController
 	{
-
-
 		//The current state of the game
 		private static GameState _state;
+
 		//The chess piece that is currently chosen
 		private static ChessPiece _currentPiece;
+
 		//The board currently handled by the Controller
 		private static ChessBoard _board;
 
@@ -161,21 +161,6 @@ namespace ChessGame
 		public static void DrawGame()
 		{
 			_board.DrawBoard ();
-			PrintMessage ();
-		}
-
-		/// <summary>
-		/// Prints the message.
-		/// </summary>
-		public static void PrintMessage()
-		{
-			SwinGame.DrawText (_state.ToString(), Color.Red, 300,300);
-			//Console.WriteLine (_state.ToString ());
-			if (_currentPiece != null)
-			{
-				//Console.WriteLine (_currentPiece.Name);
-				SwinGame.DrawText (_currentPiece.Name, Color.Red, 300, 350);
-			}
 		}
 	}
 }

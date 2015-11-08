@@ -8,6 +8,7 @@ namespace ChessGame
 		// The dimensions of each grid
 		private const int GRID_WIDTH = 75; 
 		private const int GRID_HEIGHT = 75;
+
 		// A grid array used for storing the grids on the chessboard
 		private Grid[,] _grids = new Grid[8,8];
 
@@ -37,16 +38,14 @@ namespace ChessGame
 					}
 
 					_grids [i,j] = new Grid (x, y, i, j, color);
+
 					x += 75;
 					if (x == 600)
 						x = 0;
 				}
 				y += 75;
-
 				if (y == 600)
-				{
 					y = 0;
-				}
 			}
 
 		}
@@ -140,7 +139,6 @@ namespace ChessGame
 				return _grids [i, j];
 			}
 		}
-
 	}
 }
 

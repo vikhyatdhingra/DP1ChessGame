@@ -7,15 +7,20 @@ namespace ChessGame
 	{
 		//The piece currently on the grid
 		private ChessPiece _chessPiece = null;
+
 		//The location for drawing the piece representation. This is calculated from the drawing location
 		private Point2D _centerLocation;
+
 		//The location for drawing the grid itself
 		private Point2D _drawingLocation;
+
 		//The color of the grid
 		private Color _color;
+
 		//The indexes of the grid on the chessboard
 		private int _x;
 		private int _y;
+
 		//Indicates whether this grid is highlighted or not
 		private bool _isHighlighted;
 
@@ -82,28 +87,6 @@ namespace ChessGame
 		}
 
 		/// <summary>
-		/// Draws the grid
-		/// </summary>
-		public void DrawGrid()
-		{
-			if (_color == Color.Black)
-			{
-				SwinGame.FillRectangle (_color, _drawingLocation.X, _drawingLocation.Y, 75, 75);
-			}
-			else
-			{
-				SwinGame.DrawRectangle (Color.Black, _drawingLocation.X, _drawingLocation.Y, 75, 75);
-			}
-
-			if (IsHighlighted)
-			{
-				SwinGame.FillRectangle (Color.DarkGreen, _drawingLocation.X + 2, _drawingLocation.Y + 2, 71, 71);
-			}
-
-			DrawPiece ();
-		}
-
-		/// <summary>
 		/// Gets the current piece on the grid.
 		/// </summary>
 		/// <value>The piece.</value>
@@ -130,6 +113,29 @@ namespace ChessGame
 				_isHighlighted = value;
 			}
 		}
+
+		/// <summary>
+		/// Draws the grid
+		/// </summary>
+		public void DrawGrid()
+		{
+			if (_color == Color.Black)
+			{
+				SwinGame.FillRectangle (_color, _drawingLocation.X, _drawingLocation.Y, 75, 75);
+			}
+			else
+			{
+				SwinGame.DrawRectangle (Color.Black, _drawingLocation.X, _drawingLocation.Y, 75, 75);
+			}
+
+			if (IsHighlighted)
+			{
+				SwinGame.FillRectangle (Color.DarkGreen, _drawingLocation.X + 2, _drawingLocation.Y + 2, 71, 71);
+			}
+
+			DrawPiece ();
+		}
+
 
 		/// <summary>
 		/// Draws the piece currently on the grid.
