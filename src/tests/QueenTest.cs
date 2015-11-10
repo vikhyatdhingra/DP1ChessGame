@@ -13,7 +13,7 @@ namespace ChessGame
 			Queen qn = new Queen (cb [4, 4], "B");
 			cb [4, 4].PlacePiece (qn);
 
-			//All possible movements
+			//All possible movement directions
 			Assert.IsTrue (qn.CheckMovementRule (cb [5, 4], cb));
 			Assert.IsTrue (qn.CheckMovementRule (cb [5, 5], cb));
 			Assert.IsTrue (qn.CheckMovementRule (cb [4, 5], cb));

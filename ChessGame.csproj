@@ -82,6 +82,7 @@
     <Compile Include="src\tests\KingTest.cs" />
     <Compile Include="src\tests\KnightTest.cs" />
     <Compile Include="src\tests\QueenTest.cs" />
+    <Compile Include="src\tests\ChessPieceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

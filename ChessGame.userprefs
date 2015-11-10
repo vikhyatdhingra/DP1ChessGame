@@ -1,37 +1,24 @@
 ﻿<Properties StartupItem="ChessGame.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\tests\QueenTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\tests\ChessPieceTests.cs">
     <Files>
-      <File FileName="src\ChessPiece.cs" Line="4" Column="2" />
+      <File FileName="src\ChessPiece.cs" Line="1" Column="1" />
       <File FileName="src\Grid.cs" Line="1" Column="1" />
       <File FileName="src\Pawn.cs" Line="1" Column="1" />
-      <File FileName="src\GameController.cs" Line="1" Column="1" />
-      <File FileName="src\pieces\ChessPiece.cs" Line="237" Column="34" />
+      <File FileName="src\GameController.cs" Line="18" Column="22" />
       <File FileName="src\tests\BishopTest.cs" Line="1" Column="1" />
-      <File FileName="src\ChessBoard.cs" Line="26" Column="6" />
-      <File FileName="src\tests\QueenTest.cs" Line="10" Column="35" />
-      <File FileName="src\pieces\Queen.cs" Line="7" Column="24" />
+      <File FileName="src\ChessBoard.cs" Line="1" Column="1" />
+      <File FileName="src\tests\QueenTest.cs" Line="1" Column="1" />
+      <File FileName="src\pieces\Queen.cs" Line="10" Column="3" />
       <File FileName="src\tests\RookTests.cs" Line="1" Column="1" />
       <File FileName="src\tests\PawnTests.cs" Line="1" Column="1" />
-      <File FileName="src\tests\KingTest.cs" Line="17" Column="4" />
+      <File FileName="src\tests\KingTest.cs" Line="1" Column="1" />
+      <File FileName="src\tests\ChessPieceTests.cs" Line="67" Column="4" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.NUnit.TestPad">
         <State name="__root__">
-          <Node name="ChessGame" expanded="True">
-            <Node name="ChessGame" expanded="True">
-              <Node name="ChessGame" expanded="True">
-                <Node name="BishopTest" expanded="True" />
-                <Node name="KingTest" expanded="True" />
-                <Node name="KnightTest" expanded="True">
-                  <Node name="TestKnightMovementOnEmpty" selected="True" />
-                </Node>
-                <Node name="PawnTests" expanded="True" />
-                <Node name="QueenTest" expanded="True" />
-                <Node name="RookTests" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="ChessGame" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

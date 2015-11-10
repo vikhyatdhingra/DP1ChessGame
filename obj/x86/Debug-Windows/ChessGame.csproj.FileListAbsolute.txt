@@ -76,6 +76,7 @@ C:\Programming\ChessGame\bin\Debug\SwinGame.dll
 C:\Programming\ChessGame\bin\Debug\nunit.framework.xml
 C:\Programming\ChessGame\obj\x86\Debug-Windows\ChessGame.csprojResolveAssemblyReference.cache
 C:\Programming\ChessGame\obj\x86\Debug-Windows\MyGame.exe
+D:\DP1ChessGame\obj\x86\Debug-Windows\ChessGame.csprojResolveAssemblyReference.cache
 D:\DP1ChessGame\bin\Debug\Resources\animations\startup.txt
 D:\DP1ChessGame\bin\Debug\Resources\bundles\FileDialog.txt
 D:\DP1ChessGame\bin\Debug\Resources\bundles\splash.txt
@@ -100,5 +101,4 @@ D:\DP1ChessGame\bin\Debug\MyGame.exe
 D:\DP1ChessGame\bin\Debug\nunit.framework.dll
 D:\DP1ChessGame\bin\Debug\SwinGame.dll
 D:\DP1ChessGame\bin\Debug\nunit.framework.xml
-D:\DP1ChessGame\obj\x86\Debug-Windows\ChessGame.csprojResolveAssemblyReference.cache
 D:\DP1ChessGame\obj\x86\Debug-Windows\MyGame.exe
